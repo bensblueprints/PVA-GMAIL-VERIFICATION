@@ -1,0 +1,64 @@
+{
+  "application": "HyperAccounts",
+  "version": "0.2.0",
+  "engine": "HyperAccounts step engine with optional PVACreator adapter",
+  "standaloneRegistrationEngine": false,
+  "features": [
+    {
+      "name": "Independent workflow builder and row engine",
+      "state": "Implemented",
+      "detail": "Ordered browser actions, reusable input columns, isolated sessions, a serial job queue, human checkpoints, pause/resume/cancel, persisted results, and visible success checks. Gmail-specific steps still need validation."
+    },
+    {
+      "name": "Selectable image CAPTCHA providers",
+      "state": "Implemented",
+      "detail": "Manual, 2Captcha, or Anti-Captcha. Workflow defaults, action overrides, and per-row provider references. Provider integration is mock-tested; live paid solves have not been tested."
+    },
+    {
+      "name": "Campaign management",
+      "state": "Implemented",
+      "detail": "Discover, create, inspect, start, stop, and remove supported campaigns through the local engine."
+    },
+    {
+      "name": "Gmail QR account workflow",
+      "state": "Engine dependent",
+      "detail": "Add, list, monitor, and remove accounts. Requires the Gmail_Bypass_QR_Code module to be available."
+    },
+    {
+      "name": "SMS cost catalog",
+      "state": "Implemented",
+      "detail": "241 supplied rates and integer-cent estimates. Actual provider charges are not exposed by the engine."
+    },
+    {
+      "name": "Agent automation",
+      "state": "Implemented",
+      "detail": "Local stdio MCP server, versioned HTTP API, and an account-registration workflow prompt."
+    },
+    {
+      "name": "Diagnostics and action history",
+      "state": "Implemented",
+      "detail": "Live availability, missing configuration checks, and local action history without credential values."
+    },
+    {
+      "name": "Outlook and X account entry",
+      "state": "Original app required",
+      "detail": "Campaign endpoints are available. Their account-entry schema is not documented by the published API."
+    },
+    {
+      "name": "Browser profiles and session management",
+      "state": "Original app required",
+      "detail": "PVACreator documents browser profiles; its published registration API exposes no profile-management endpoints."
+    },
+    {
+      "name": "Account Speeder / warm-up",
+      "state": "Original app required",
+      "detail": "No documented API endpoint is available for this module. HyperAccounts does not simulate it."
+    },
+    {
+      "name": "Full platform parity and fingerprint infrastructure",
+      "state": "Not implemented",
+      "detail": "Platform-specific registration templates, fingerprint infrastructure, and all original app actions have not been recreated."
+    }
+  ],
+  "independentStepEngine": true
+}

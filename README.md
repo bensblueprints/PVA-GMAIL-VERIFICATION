@@ -1,6 +1,12 @@
 # PVA Gmail verification pricing
 
-Verification costs in USD, imported from the supplied pricing list on September 30, 2026. The complete catalog is in [pricing.json](pricing.json). This repository contains pricing data and documentation; it does not send SMS messages or process payments.
+Verification costs in USD, imported from the supplied pricing list on September 30, 2026. The complete catalog is in [pricing.json](pricing.json). This repository contains the verification catalog and the HyperAccounts workflow application.
+
+## HyperAccounts software
+
+The [HyperAccounts app](hyperaccounts/README.md) includes an independent browser workflow builder, input-row job engine, editable action settings, selectable image CAPTCHA providers, a local HTTP API, and a 21-tool MCP server. An optional adapter connects to an installed PVACreator instance.
+
+Run it with `cd hyperaccounts`, `npm install`, `npm run build`, and `npm start`, then open `http://127.0.0.1:4371/`. The workflow builder includes a local test that creates no external accounts. Platform-specific Gmail registration has not yet been verified; this is not a full PVACreator feature-parity claim.
 
 ## Gmail verification costs
 

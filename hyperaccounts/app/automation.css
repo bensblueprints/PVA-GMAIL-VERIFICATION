@@ -1,0 +1,252 @@
+.automation-stack {
+  display: grid;
+  gap: 24px;
+}
+.automation-hero {
+  background: #163e32;
+  color: white;
+  padding: 28px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  border-radius: 16px;
+}
+.automation-hero .eyebrow {
+  color: #bde896;
+}
+.automation-hero h2 {
+  font-size: 25px;
+  margin: 6px 0 8px;
+}
+.automation-hero p {
+  color: #c5d5ce;
+  max-width: 680px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.automation-symbol {
+  padding: 16px;
+  background: #c6ed98;
+  color: #163e32;
+  border-radius: 14px;
+}
+.automation-badge {
+  margin-left: auto;
+  white-space: nowrap;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: #cae8bc;
+}
+.automation-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.automation-card {
+  padding: 26px;
+}
+.integration-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.automation-card h2 {
+  font-size: 21px;
+  font-weight: 600;
+}
+.automation-card > p {
+  font-size: 14px;
+  color: #75817b;
+  line-height: 1.7;
+  margin: 10px 0 20px;
+}
+.automation-card > small {
+  display: block;
+  font-size: 12px;
+  line-height: 1.7;
+  color: #78847d;
+  margin-top: 20px;
+}
+.code-block {
+  font-size: 13px;
+  border: 1px solid #e5e9e4;
+  background: #f5f7f4;
+  border-radius: 9px;
+  padding: 16px;
+  overflow: auto;
+  margin-bottom: 20px;
+  color: #274639;
+}
+.integration-actions {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.workflow-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 0 26px 28px;
+  gap: 24px;
+}
+.workflow-steps > div > span {
+  font-size: 12px;
+  font-weight: 600;
+  color: #587663;
+  background: #eef4e9;
+  padding: 8px 10px;
+  border-radius: 8px;
+  display: inline-block;
+  margin: 8px 0 16px;
+}
+.workflow-steps h3 {
+  font-size: 14px;
+  font-weight: 600;
+}
+.workflow-steps p {
+  font-size: 13px;
+  line-height: 1.7;
+  color: #78847d;
+  margin-top: 8px;
+}
+.diagnostic-list {
+  padding: 0 26px 26px;
+}
+.diagnostic-list > div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 16px 0;
+  border-bottom: 1px solid #edf0eb;
+}
+.diagnostic-list p,
+.coverage-list p {
+  color: #78847d;
+  font-size: 13px;
+  line-height: 1.7;
+  margin-top: 5px;
+}
+.diagnostic-list strong,
+.coverage-list strong {
+  font-size: 14px;
+  font-weight: 600;
+}
+.automation-empty {
+  padding: 0 26px 28px;
+}
+.coverage-list {
+  padding: 0 26px 20px;
+}
+.coverage-list > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  padding: 18px 0;
+  border-bottom: 1px solid #edf0eb;
+}
+.coverage-list > div:last-child {
+  border: 0;
+}
+.coverage-state {
+  flex-shrink: 0;
+  font-size: 12px;
+  padding: 6px 10px;
+  background: #f4f2ed;
+  color: #807252;
+  border-radius: 6px;
+}
+.coverage-state.complete {
+  color: #286244;
+  background: #edf6e9;
+}
+.brand {
+  font-size: 22px;
+}
+.brand-light {
+  font-size: 19px;
+}
+.advanced-fields {
+  border-top: 1px solid #e7ece6;
+  margin-top: 10px;
+  padding-top: 16px;
+}
+.advanced-fields summary {
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}
+.advanced-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 18px;
+}
+.advanced-grid label {
+  display: grid;
+  gap: 8px;
+  font-size: 12px;
+}
+.advanced-grid .wide {
+  grid-column: 1/-1;
+}
+.account-form-scroll {
+  max-height: 70vh;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+.danger-action {
+  color: #a34339;
+}
+.remove-explanation {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #6b756e;
+}
+.detail-account-list > div > span:first-child {
+  flex: 1;
+}
+.remove-account {
+  border: 0;
+  background: transparent;
+  color: #a34339;
+  padding: 6px;
+  cursor: pointer;
+}
+@media (max-width: 1100px) {
+  .automation-hero {
+    flex-wrap: wrap;
+  }
+  .automation-badge {
+    display: none;
+  }
+  .workflow-steps {
+    grid-template-columns: 1fr 1fr;
+  }
+  .automation-grid {
+    gap: 18px;
+  }
+}
+@media (max-width: 767px) {
+  .automation-grid {
+    grid-template-columns: 1fr;
+  }
+  .automation-hero {
+    padding: 22px;
+  }
+  .coverage-list > div {
+    align-items: flex-start;
+    gap: 12px;
+    flex-direction: column;
+  }
+  .automation-hero h2 {
+    font-size: 22px;
+  }
+  .workflow-steps {
+    gap: 18px;
+  }
+  .automation-card {
+    padding: 22px;
+  }
+}

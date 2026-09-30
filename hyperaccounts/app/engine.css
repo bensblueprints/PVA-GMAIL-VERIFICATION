@@ -1,0 +1,260 @@
+.engine-workspace {
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+.flow-main {
+  display: grid;
+  gap: 24px;
+  min-width: 0;
+}
+.flow-list {
+  padding: 0 12px;
+}
+.flow-list > button {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 14px 10px;
+  text-align: left;
+  border-radius: 9px;
+  background: transparent;
+  border: 0;
+  color: #4f6156;
+  cursor: pointer;
+}
+.flow-list > button.selected {
+  background: #edf4e7;
+  color: #274a33;
+}
+.flow-list strong {
+  font-size: 13px;
+  font-weight: 600;
+  display: block;
+}
+.flow-list small {
+  display: block;
+  font-size: 11px;
+  margin-top: 5px;
+  line-height: 1.5;
+  color: #7b867d;
+}
+.flow-list > button > span {
+  flex: 1;
+}
+.flow-actions {
+  padding: 22px;
+}
+.flow-actions > button {
+  width: 100%;
+}
+.flow-actions p {
+  font-size: 12px;
+  color: #7b867d;
+  margin-top: 12px;
+  line-height: 1.7;
+}
+.flow-step-strip {
+  display: flex;
+  overflow: auto;
+  gap: 24px;
+  padding: 0 26px 24px;
+}
+.flow-step-strip > button {
+  min-width: 120px;
+  max-width: 180px;
+}
+.flow-step-strip span {
+  display: block;
+  font-size: 12px;
+  color: #63814e;
+  margin-bottom: 10px;
+}
+.flow-step-strip strong {
+  font-size: 13px;
+  font-weight: 600;
+  display: block;
+}
+.flow-step-strip small {
+  font-size: 11px;
+  color: #7b867d;
+  display: block;
+  margin-top: 6px;
+}
+.engine-table-subtitle {
+  font-size: 12px;
+  color: #7b867d;
+  margin-top: 5px;
+}
+.engine-table-wrap {
+  overflow: auto;
+  max-width: 100%;
+}
+.engine-cell {
+  max-width: 220px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+}
+.row-controls {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.engine-scope-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 0 3px;
+  color: #7c867e;
+  font-size: 12px;
+  line-height: 1.8;
+}
+.engine-scope-note > svg {
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+.workflow-editor {
+  max-height: 75vh;
+  overflow: auto;
+  padding-right: 5px;
+}
+.editor-steps {
+  display: grid;
+  gap: 16px;
+  margin: 14px 0;
+}
+.editor-step {
+  border: 1px solid #e2e8df;
+  border-radius: 12px;
+  padding: 15px;
+  background: #fafbf8;
+}
+.editor-step-heading {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.editor-step-heading > span {
+  font-size: 12px;
+  color: #5c7556;
+  min-width: 14px;
+}
+.editor-step-inputs {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+.editor-step-inputs > * {
+  flex: 1;
+  min-width: 170px;
+}
+.execution-log {
+  display: grid;
+  gap: 14px;
+  max-height: 50vh;
+  overflow: auto;
+}
+.execution-log > div {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  border-bottom: 1px solid #edf0e9;
+  padding: 12px 0;
+}
+.execution-log strong {
+  font-size: 13px;
+  flex: 1;
+}
+.execution-log time {
+  font-size: 11px;
+  color: #879085;
+}
+.workflow-editor small {
+  font-size: 12px;
+  color: #7b867d;
+  font-weight: 400;
+  line-height: 1.6;
+}
+@media (max-width: 1100px) {
+  .engine-workspace {
+    grid-template-columns: 1fr;
+  }
+  .flow-sidebar .flow-list {
+    display: flex;
+    overflow: auto;
+  }
+  .flow-sidebar .flow-list > button {
+    min-width: 210px;
+    width: auto;
+  }
+  .flow-actions {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+  .flow-actions > button {
+    width: auto;
+  }
+  .flow-actions p {
+    margin: 0;
+  }
+}
+@media (max-width: 767px) {
+  .flow-actions {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .editor-step-inputs {
+    flex-direction: column;
+  }
+  .workflow-editor {
+    max-height: 68vh;
+  }
+  .engine-workspace {
+    gap: 18px;
+  }
+  .flow-step-strip {
+    padding: 0 20px 20px;
+  }
+  .execution-log time {
+    display: none;
+  }
+}
+
+.flow-step-strip > button {
+  text-align: left;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  padding: 10px;
+  cursor: pointer;
+}
+.flow-step-strip > button:hover {
+  background: #f0f5eb;
+  border-color: #dfe8d7;
+}
+.action-options {
+  display: grid;
+  gap: 12px;
+  max-height: 55vh;
+  overflow: auto;
+}
+.action-options > div {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 16px;
+  padding: 10px 0;
+  border-bottom: 1px solid #edf0e9;
+}
+.action-options strong {
+  font-size: 12px;
+  color: #6f7c72;
+}
+.action-options code {
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
